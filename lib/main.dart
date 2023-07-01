@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'home.dart';
 import 'login.dart';
 
 void main(){
@@ -18,7 +19,14 @@ class SplashPage extends StatefulWidget{
 
 class _SplashPageState extends State<SplashPage> {
   @override
-
+  void initState() {
+    Timer(Duration(seconds: 5), () {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
+        return HomePage();
+      }));
+    });
+    super.initState();
+  }
 
   @override
 
