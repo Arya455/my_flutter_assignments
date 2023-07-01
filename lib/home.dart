@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              height: 30,
+              height: 50,
               width: 1000,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.green),
@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              height: 30,
+              height: 50,
               width: 1000,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(primary: Colors.green),

@@ -55,9 +55,8 @@ class LoginPage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  height: 50,
-                  width: 500,
+
+
                   child: SizedBox(height: 50,width: 1000,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -69,9 +68,13 @@ class LoginPage extends StatelessWidget {
                             style: TextStyle(color: Colors.white),
                           )),
                     ),
-                  ),
+
                 ),
-              )
+              ),
+              TextButton(style: TextButton.styleFrom(primary: Colors.grey),
+                  onPressed: (){
+                
+              }, child: Text("Do you have an Account? SignUp",style: TextStyle(fontSize: 20),))
             ],
           ),
         ),

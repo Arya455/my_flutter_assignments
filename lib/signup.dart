@@ -26,7 +26,7 @@ class SignUpPage extends StatelessWidget {
                 padding: EdgeInsets.all(8.0),
                 child: Text(
                   "Create an Account..Its free",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(fontSize:20,color: Colors.grey),
                 ),
               ),
               Padding(
@@ -74,6 +74,9 @@ class SignUpPage extends StatelessWidget {
                   }, child: Text("SignUp")),
                 ),
               ),
+              TextButton(style: TextButton.styleFrom(primary: Colors.grey),
+                  onPressed: (){},
+                  child: Text("Do you have an Account? Login",style: TextStyle(fontSize: 20,color: Colors.grey),))
             ],
           ),
         ),
