@@ -26,7 +26,7 @@ class ContactBook extends StatelessWidget {
                     Icons.person_2_outlined,
                     color: Colors.white,)),
               title: Text("Arya"),
-              subtitle: Text("56465454564"),
+              subtitle: Text("565646546565"),
               trailing: IconButton(onPressed: () {}, icon: Icon(Icons.call)),
             ),
           ),
