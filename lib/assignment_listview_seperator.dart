@@ -20,7 +20,8 @@ class Seperator extends StatelessWidget{
             child: Card(
               child:Padding(
                 padding: const EdgeInsets.only(top: 10.0),
-                child: Text(names[index],style: TextStyle(color: Colors.black),),
+                child: Text(names[index],
+                  style: TextStyle(color: Colors.black),),
               ) ,
             ),
           ),
