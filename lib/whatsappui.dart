@@ -27,7 +27,7 @@ return Scaffold(
     ],
   ),
   body: ListView(
-    children:   [
+    children:   const [
       Padding(
         padding: EdgeInsets.all(10.0),
         child: Card(
