@@ -9,12 +9,53 @@ void main(){
 }
 
 class WhatsApp extends StatelessWidget{
+  var names = ["Priyanka Chopra",
+    "Nick Johanas",
+    "Prabhas",
+    "NayanThara",
+    "Katrina Kaif",
+    "Trisha",
+    "Sharukh Khan",
+    "Shilpa"];
+  var images = ["assets/images/images.jpg",
+    "assets/images/nick.jpg",
+    "assets/images/prabhas.jpg",
+    "assets/images/nayan.jpg",
+    "assets/images/katrina.jpg",
+    "assets/images/trisha.jpg",
+    "assets/images/sharukh.jpg",
+    "assets/images/shilpa.jpg"];
+  var messages = ["Hai",
+    "Hello....where are you",
+    "Hai Honey",
+    "Bye take care",
+    "Are you ready",
+    "Hai",
+    "Let me inform",
+    "Good night"];
+  var times = ["12.50",
+    "12.45",
+    "12.30",
+    "11.45",
+    "11.00",
+    "10.00",
+    "09.55",
+    "09.45"];
+  var icons=[  Icon(Icons.done),
+    Icon(Icons.done_all),
+    Icon(Icons.done),
+    Icon(Icons.done_all),
+    Icon(Icons.done),
+    Icon(Icons.done_all_outlined),
+    Icon(Icons.done),
+    Icon(Icons.done_all)];
+
   @override
   Widget build(BuildContext context) {
 return Scaffold(
   appBar: AppBar(
     title: Text("What'sApp"),
-    actions: const [
+    actions:  [
       Padding(
         padding: EdgeInsets.all(10.0),
         child: Icon(Icons.search),
@@ -24,154 +65,40 @@ return Scaffold(
         padding: EdgeInsets.only(right: 30.0),
         child: Icon(Icons.camera_alt),
       ),
+      PopupMenuButton(itemBuilder: (context){
+return[
+  PopupMenuItem(child: Text("Settings")),
+  PopupMenuItem(child: Text("New Group")),
+  PopupMenuItem(child: Text("Payments")),
+  PopupMenuItem(child: Text("New Broadcast")),
+];
+      }),
     ],
   ),
   body: ListView(
-    children:   const [
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(
-                  "assets/images/images.jpg")
-            ),
-    title: Text("Priyanka Chopra"),
-    subtitle: Text("hai, hello"),
-    trailing:Column(
+    children: List.generate(08, (index) => Card(
+      child: ListTile(
+        leading: CircleAvatar(
+          backgroundImage: AssetImage(images[index]),
+        ),
+        title: Column(
+          children: [
+            Text(names[index],style: TextStyle(color: Colors.black),),
+            Text(messages[index],style: TextStyle(fontSize: 15),),
+          ],
 
-      children: [
+        ),
+        trailing: Column(
+          children: [
+            Text(times[index]),
 
-        Text("10:15"),
-        Icon(Icons.done_all)
-      ],
-    )
 
-            
-            ),
-          ),
-      ),
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-                backgroundImage: AssetImage("assets/images/nick.jpg"
-                   )
-            ),
-            title: Text("Nick Jonas"),
-            subtitle: Text("hai, kya he"),
-            trailing:SizedBox(
-              child: Column(
-                children: [Text("10.00"),
-                  Icon(Icons.done_all)
-                ],
-              ),
-            )
-          ),
+          ],
         ),
       ),
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                    "assets/images/prabhas.jpg")
-            ),
-            title: Text("Prabhas"),
-            subtitle: Text("hai, whatsapp"),
-            trailing: Text("10.00"),
-
-          ),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                    "assets/images/nayan.jpg")
-            ),
-            title: Text("NayanThara"),
-            subtitle: Text("hai, whatsapp"),
-            trailing: Text("09:59"),
-
-          ),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                    "assets/images/katrina.jpg")
-            ),
-            title: Text("Katrina Kaif"),
-            subtitle: Text("hai, whatsapp"),
-            trailing: Text("09:55"),
-
-          ),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                    "assets/images/trisha.jpg")
-            ),
-            title: Text("Trisha"),
-            subtitle: Text("Are you ok????"),
-            trailing: Text("09:50"),
-
-          ),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                    "assets/images/sharukh.jpg")
-            ),
-            title: Text("Sharukh Khan"),
-            subtitle: Text("hai, how are you"),
-            trailing: Text("09:45"),
-
-
-
-
-          ),
-        ),
-      ),
-      Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Card(
-          child: ListTile(
-            leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                    "assets/images/shilpa.jpg")
-            ),
-            title: Text("Shilpa"),
-            subtitle: Text("hai, where are you"),
-            trailing: Column(
-              children: [
-                Text("yesterday")
-              ],
-            )
-
-          ),
-        ),
-      ),
-
-
-    ],
+    ))
   ),
+   
   
 );
   }
