@@ -10,7 +10,7 @@ class gridSample extends StatelessWidget {
   @override
   List<Color> gridcolor = [
     Colors.pink,
-    Colors.yellow,
+    Colors.indigo,
     Colors.lightBlue,
     Colors.teal,
     Colors.brown,
